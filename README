@@ -1,63 +1,121 @@
-# ESP32 Marauder Evil Portal Templates
+# LBDL Marauder Evil Portal Templates
 
-Colección de plantillas HTML personalizadas para utilizar con la función **Evil Portal de ESP32 Marauder**.
+Colección de plantillas HTML para utilizar con la funcionalidad **Evil Portal de ESP32 Marauder**.
 
-El objetivo de este repositorio es reunir diferentes diseños de portales para realizar **demostraciones, formación, concienciación en ciberseguridad y pruebas de seguridad autorizadas**.
-
-Proyecto creado y mantenido por **LaBuhardillaDelLoco**.
-
----
-
-## ¿Qué es Evil Portal?
-
-Evil Portal es una funcionalidad incluida en proyectos como **ESP32 Marauder** que permite mostrar una página web personalizada a los dispositivos que interactúan con un punto de acceso.
-
-Este tipo de herramientas resulta especialmente útil para comprender cómo funcionan los portales cautivos y para realizar demostraciones relacionadas con ingeniería social, seguridad WiFi y concienciación sobre ataques de phishing.
-
-Este repositorio contiene únicamente las **plantillas HTML** utilizadas para este tipo de demostraciones.
-
----
-
-## Contenido del repositorio
-
-Las plantillas se encuentran dentro de la carpeta:
-
-```text
-templates/
-```
-
-Ejemplo de estructura:
-
-```text
-ESP32-Marauder-Evil-Portal-Templates/
-
-├── templates/
-│   ├── template-01.html
-│   ├── template-02.html
-│   └── template-03.html
-│
-├── previews/
-│   ├── template-01.png
-│   ├── template-02.png
-│   └── template-03.png
-│
-├── README.md
-└── LICENSE
-```
-
-La estructura podrá ampliarse a medida que se incorporen nuevas plantillas.
+Este repositorio forma parte de los proyectos de **LaBuhardillaDelLoco** y reúne diferentes interfaces web ligeras preparadas para demostraciones, formación, concienciación y pruebas autorizadas relacionadas con portales cautivos, seguridad WiFi e ingeniería social.
 
 ---
 
 ## Plantillas disponibles
 
-| Plantilla   | Descripción            | Preview      |
-| ----------- | ---------------------- | ------------ |
-| Template 01 | Portal de demostración | Próximamente |
-| Template 02 | Portal de demostración | Próximamente |
-| Template 03 | Portal de demostración | Próximamente |
+Actualmente el repositorio incluye las siguientes plantillas:
 
-Esta tabla se irá actualizando conforme se añadan nuevas plantillas.
+| Archivo | Plantilla | Descripción |
+|---|---|---|
+| `Index_Amazon.html` | Amazon | Interfaz inspirada en el estilo visual de Amazon |
+| `Index_Facebook.html` | Facebook | Interfaz inspirada en el estilo visual de Facebook |
+| `Index_Google.html` | Google | Interfaz inspirada en el estilo visual de Google |
+| `Index_TP_link_AX3000.html` | TP-Link AX3000 | Interfaz inspirada en el panel de un router TP-Link AX3000 |
+
+La colección irá creciendo progresivamente con nuevas plantillas.
+
+---
+
+## Estructura actual del repositorio
+
+    LBDL-Marauder-Evil-Portal-Templates/
+    │
+    ├── Index_Amazon.html
+    ├── Index_Facebook.html
+    ├── Index_Google.html
+    ├── Index_TP_link_AX3000.html
+    └── README.md
+
+Por el momento, las plantillas se mantienen directamente en la raíz del repositorio para facilitar su descarga, modificación y utilización.
+
+---
+
+## Index_Amazon.html
+
+Plantilla con una interfaz visual inspirada en Amazon.
+
+Archivo: `Index_Amazon.html`
+
+Pensada para demostraciones relacionadas con:
+
+- Portales cautivos
+- Ingeniería social
+- Concienciación sobre phishing
+- Interfaces de autenticación
+- Laboratorios de ciberseguridad
+
+---
+
+## Index_Facebook.html
+
+Plantilla con una interfaz visual inspirada en Facebook.
+
+Archivo: `Index_Facebook.html`
+
+Puede utilizarse en demostraciones educativas para explicar cómo una interfaz familiar puede generar confianza en el usuario dentro de un escenario controlado.
+
+Casos de uso:
+
+- Concienciación sobre ingeniería social
+- Demostraciones de phishing
+- Portales cautivos
+- Formación en ciberseguridad
+- Laboratorios de pruebas
+
+---
+
+## Index_Google.html
+
+Plantilla con una interfaz visual inspirada en Google.
+
+Archivo: `Index_Google.html`
+
+Está orientada principalmente a demostraciones relacionadas con:
+
+- Ingeniería social
+- Portales cautivos
+- Interfaces de autenticación
+- Concienciación en seguridad
+- Pruebas en entornos controlados
+
+---
+
+## Index_TP_link_AX3000.html
+
+Plantilla inspirada en la interfaz de un router **TP-Link AX3000**.
+
+Archivo: `Index_TP_link_AX3000.html`
+
+Esta plantilla resulta especialmente útil para demostrar escenarios relacionados con:
+
+- Routers domésticos
+- Portales de administración
+- Redes WiFi
+- Ingeniería social
+- Seguridad de dispositivos de red
+- Concienciación sobre accesos falsificados
+
+---
+
+## ¿Qué es Evil Portal?
+
+**Evil Portal** es una funcionalidad disponible en proyectos como **ESP32 Marauder** que permite mostrar una página web personalizada a través de un punto de acceso WiFi.
+
+Este tipo de herramientas puede utilizarse para estudiar de forma práctica conceptos relacionados con:
+
+- Portales cautivos
+- Seguridad WiFi
+- Ingeniería social
+- Interfaces de autenticación
+- Concienciación sobre phishing
+- Pruebas de seguridad autorizadas
+
+Este repositorio contiene únicamente las plantillas HTML utilizadas para este tipo de demostraciones.
 
 ---
 
@@ -65,190 +123,188 @@ Esta tabla se irá actualizando conforme se añadan nuevas plantillas.
 
 ### 1. Descargar el repositorio
 
-Puedes clonar el repositorio utilizando Git:
+Puedes clonar el repositorio mediante Git:
 
-```bash
-git clone https://github.com/TU-USUARIO/ESP32-Marauder-Evil-Portal-Templates.git
-```
+    git clone https://github.com/labuhardilladelloco/LBDL-Marauder-Evil-Portal-Templates.git
 
-O descargarlo directamente desde GitHub mediante:
+También puedes descargarlo directamente desde GitHub utilizando:
 
-```text
-Code → Download ZIP
-```
+**Code → Download ZIP**
 
----
+### 2. Elegir una plantilla
 
-### 2. Seleccionar una plantilla
+Selecciona uno de los archivos disponibles, por ejemplo:
 
-Accede a:
+`Index_Google.html`
 
-```text
-/templates
-```
+o:
 
-y selecciona el archivo HTML que quieras utilizar.
-
----
+`Index_TP_link_AX3000.html`
 
 ### 3. Personalizar la plantilla
 
-Las plantillas pueden modificarse con cualquier editor de texto o editor de código.
+Las plantillas pueden modificarse utilizando cualquier editor de código.
 
-Por ejemplo:
+Algunas opciones habituales:
 
-* Visual Studio Code
-* Notepad++
-* Sublime Text
-* Vim
-* Cualquier editor HTML
+- Visual Studio Code
+- Notepad++
+- Sublime Text
+- Vim
+- Cualquier editor HTML
 
-Puedes modificar textos, estilos, colores y otros elementos visuales según las necesidades de tu laboratorio o demostración.
+Dependiendo de la plantilla podrás modificar:
 
----
+- Textos
+- Colores
+- Estilos CSS
+- Elementos visuales
+- Mensajes
+- Formularios
+- Distribución de la interfaz
 
 ### 4. Cargar la plantilla en ESP32 Marauder
 
-Carga el archivo HTML mediante la funcionalidad **Evil Portal** de tu dispositivo compatible con ESP32 Marauder.
+Carga el archivo HTML seleccionado mediante la funcionalidad **Evil Portal** de ESP32 Marauder.
 
-El procedimiento exacto puede variar dependiendo del hardware, firmware y versión de Marauder utilizados.
+El procedimiento exacto puede variar dependiendo de:
+
+- Dispositivo utilizado
+- Versión de ESP32 Marauder
+- Firmware instalado
+- Implementación concreta de Evil Portal
+
+---
+
+## Filosofía de las plantillas
+
+Las plantillas de este repositorio intentan seguir una filosofía sencilla:
+
+- HTML ligero
+- CSS integrado
+- Diseño responsive
+- Buena visualización en teléfonos móviles
+- Código sencillo de modificar
+- Tamaño reducido
+- Pocas dependencias externas
+- Compatibilidad con las limitaciones del ESP32
+
+Siempre que sea posible, cada plantilla se mantiene dentro de **un único archivo HTML**.
+
+Esto facilita enormemente su utilización con ESP32 Marauder.
 
 ---
 
 ## Compatibilidad
 
-Las plantillas están diseñadas principalmente para utilizarse con:
+Las plantillas están orientadas principalmente a:
 
-* ESP32
-* ESP32 Marauder
-* Dispositivos compatibles con Evil Portal
+- ESP32
+- ESP32 Marauder
+- Dispositivos compatibles con Evil Portal
 
 La compatibilidad puede variar dependiendo de:
 
-* versión del firmware
-* memoria disponible
-* dispositivo utilizado
-* implementación concreta de Evil Portal
-
-Por este motivo se recomienda mantener las plantillas lo más ligeras posible.
-
----
-
-## Diseño de las plantillas
-
-Siempre que sea posible, las plantillas intentarán cumplir los siguientes criterios:
-
-* HTML ligero
-* CSS integrado
-* pocas dependencias externas
-* diseño responsive
-* buena visualización en dispositivos móviles
-* compatibilidad con las limitaciones del ESP32
-* facilidad para modificar el código
-
-Cuando sea posible, se priorizarán plantillas contenidas en un único archivo HTML.
-
-Esto facilita enormemente su carga y utilización en ESP32 Marauder.
-
----
-
-## Crear tus propias plantillas
-
-Puedes utilizar cualquiera de las plantillas de este repositorio como punto de partida para crear tus propios diseños.
-
-Una plantilla básica podría tener una estructura similar a esta:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Evil Portal</title>
-
-<style>
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<h1>Portal de demostración</h1>
-
-<p>ESP32 Marauder Evil Portal</p>
-
-</body>
-
-</html>
-```
-
-A partir de ahí puedes adaptar completamente su apariencia.
+- Hardware utilizado
+- Versión del firmware
+- Memoria disponible
+- Implementación de Evil Portal
 
 ---
 
 ## Recomendaciones
 
-Para mejorar la compatibilidad con dispositivos ESP32:
+Debido a las limitaciones del ESP32, se recomienda:
 
-* evita archivos excesivamente grandes
-* evita JavaScript innecesario
-* reduce el uso de imágenes pesadas
-* utiliza CSS sencillo
-* intenta mantener todo dentro de un único HTML
-* comprueba siempre la plantilla antes de utilizarla en una demostración
+- Mantener los archivos HTML lo más pequeños posible
+- Evitar JavaScript innecesario
+- Evitar frameworks web pesados
+- Reducir el tamaño de las imágenes
+- Evitar dependencias externas cuando sea posible
+- Integrar el CSS directamente en el HTML
+- Probar las plantillas desde diferentes dispositivos móviles
+- Evitar recursos que dependan de conexión a Internet
 
-También es recomendable probar las páginas desde diferentes dispositivos móviles.
+Siempre que sea posible, una plantilla debería funcionar utilizando únicamente **un archivo `.html`**.
+
+---
+
+## Objetivo del proyecto
+
+El objetivo de este repositorio es crear progresivamente una colección de interfaces que puedan utilizarse para estudiar y demostrar conceptos relacionados con:
+
+- ESP32 Marauder
+- Evil Portal
+- Portales cautivos
+- Seguridad WiFi
+- Ingeniería social
+- Phishing
+- Concienciación en ciberseguridad
+- Pruebas de seguridad autorizadas
+- Dispositivos IoT
+- Interfaces de administración
+
+La intención es mantener las plantillas sencillas, fáciles de utilizar y fáciles de modificar.
 
 ---
 
 ## Uso responsable
 
-Este proyecto está creado exclusivamente con fines de:
+Este repositorio ha sido creado exclusivamente con fines de:
 
-* aprendizaje
-* investigación
-* formación
-* concienciación en ciberseguridad
-* demostraciones
-* pruebas de seguridad autorizadas
+- Aprendizaje
+- Formación
+- Investigación
+- Concienciación en ciberseguridad
+- Laboratorios
+- Demostraciones
+- Pruebas de seguridad autorizadas
 
-Las técnicas relacionadas con Evil Portal pueden utilizarse para realizar ataques de ingeniería social o capturar información de terceros.
+Las técnicas relacionadas con Evil Portal e ingeniería social pueden utilizarse de forma abusiva.
 
-**No utilices estas plantillas contra personas, dispositivos o redes sin autorización expresa.**
+**Utiliza estas plantillas únicamente en dispositivos, sistemas y redes propias o sobre las que tengas autorización expresa para realizar pruebas.**
 
-El usuario de este proyecto es responsable de asegurarse de que sus pruebas cumplen la legislación aplicable y se realizan únicamente dentro de sistemas propios o entornos para los que dispone de autorización.
+No utilices este proyecto para obtener información, datos personales o credenciales de terceros sin autorización.
 
-Los autores y colaboradores de este repositorio no se responsabilizan del uso indebido que pueda realizarse del contenido publicado.
+El usuario es responsable de garantizar que cualquier prueba realizada cumple la legislación aplicable.
+
+Los autores y colaboradores de este repositorio no se responsabilizan del uso indebido del contenido publicado.
 
 ---
 
 ## Laboratorio recomendado
 
-Si quieres experimentar con estas plantillas, lo recomendable es crear un pequeño laboratorio controlado compuesto por:
+La mejor forma de experimentar con estas plantillas es utilizar un entorno completamente controlado.
 
-```text
-ESP32 Marauder
-        │
-        │ WiFi
-        ▼
-Punto de acceso de pruebas
-        │
-        ▼
-Teléfono / PC de laboratorio
-```
+Ejemplo:
 
-De esta forma puedes estudiar el comportamiento de los portales sin afectar a terceros.
+    ESP32 Marauder
+           │
+           │ WiFi
+           ▼
+    Punto de acceso de pruebas
+           │
+           ▼
+    Teléfono / PC de laboratorio
+
+De esta manera puedes estudiar el funcionamiento de Evil Portal sin afectar a terceros.
+
+---
+
+## Próximas plantillas
+
+La colección irá creciendo progresivamente.
+
+Podrán añadirse nuevas interfaces relacionadas con:
+
+- Routers
+- Portales WiFi
+- Servicios web
+- Sistemas operativos
+- Dispositivos IoT
+- Interfaces de autenticación
+- Portales cautivos genéricos
+- Paneles de administración
 
 ---
 
@@ -258,20 +314,21 @@ Las contribuciones son bienvenidas.
 
 Puedes colaborar:
 
-* creando nuevas plantillas
-* mejorando diseños existentes
-* corrigiendo errores
-* mejorando la compatibilidad
-* optimizando el tamaño de los archivos
-* añadiendo documentación
+- Añadiendo nuevas plantillas
+- Mejorando plantillas existentes
+- Corrigiendo errores
+- Mejorando el diseño responsive
+- Reduciendo el tamaño de los archivos
+- Mejorando la compatibilidad con ESP32 Marauder
+- Añadiendo documentación
 
-Puedes hacerlo mediante un **Pull Request** en GitHub.
+Las contribuciones pueden realizarse mediante un **Pull Request**.
 
-Antes de enviar una plantilla comprueba que:
+Antes de enviar una plantilla, comprueba que:
 
 1. Funciona correctamente.
-2. Es razonablemente ligera.
-3. No contiene archivos innecesarios.
+2. Es suficientemente ligera.
+3. No contiene dependencias innecesarias.
 4. No contiene código malicioso.
 5. Está orientada a usos educativos o pruebas autorizadas.
 
@@ -279,70 +336,36 @@ Antes de enviar una plantilla comprueba que:
 
 ## Autor
 
-Proyecto creado por:
+Creado y mantenido por:
 
-**LaBuhardillaDelLoco**
+### LaBuhardillaDelLoco
 
-Contenido centrado en:
+Contenido relacionado con:
 
-* ESP32
-* Arduino
-* IoT
-* electrónica
-* programación
-* hardware
-* domótica
-* ciberseguridad
+**ESP32 · Arduino · IoT · Electrónica · Programación · Hardware · Domótica · Ciberseguridad**
 
 YouTube:
 
-**LaBuhardillaDelLoco**
+https://www.youtube.com/@LaBuhardillaDelLoco
 
 ---
 
 ## Licencia
 
-Este proyecto puede distribuirse bajo una licencia de código abierto.
+El contenido de este repositorio puede distribuirse bajo licencia **MIT**.
 
-Una opción sencilla para este tipo de repositorio es utilizar la:
-
-**MIT License**
-
-Consulta el archivo:
-
-```text
-LICENSE
-```
-
-para obtener más información.
+Consulta el archivo `LICENSE` para obtener más información.
 
 ---
 
-## Disclaimer
+## Apoya el proyecto
 
-Este repositorio tiene fines exclusivamente educativos.
+Si estas plantillas te resultan útiles:
 
-El contenido publicado pretende ayudar a comprender el funcionamiento de portales cautivos, técnicas de ingeniería social y mecanismos de seguridad relacionados con redes WiFi.
+- Dale una ⭐ al repositorio
+- Comparte el proyecto
+- Propón nuevas plantillas
+- Envía mejoras mediante Pull Request
+- Comparte ideas para futuras interfaces
 
-Utiliza estas herramientas únicamente en:
-
-* tus propios dispositivos
-* tus propias redes
-* laboratorios
-* entornos CTF
-* sistemas donde tengas autorización explícita
-
-**No utilices este proyecto para obtener credenciales o información de terceros sin su consentimiento.**
-
----
-
-## ESP32 Marauder Evil Portal Templates
-
-Si este repositorio te resulta útil, puedes:
-
-* darle una ⭐ en GitHub
-* compartirlo
-* proponer nuevas plantillas
-* contribuir con mejoras
-
-El repositorio irá creciendo progresivamente con nuevas plantillas y diseños.
+La colección irá creciendo con nuevas plantillas para **ESP32 Marauder Evil Portal**.
