@@ -1,0 +1,348 @@
+# ESP32 Marauder Evil Portal Templates
+
+Colección de plantillas HTML personalizadas para utilizar con la función **Evil Portal de ESP32 Marauder**.
+
+El objetivo de este repositorio es reunir diferentes diseños de portales para realizar **demostraciones, formación, concienciación en ciberseguridad y pruebas de seguridad autorizadas**.
+
+Proyecto creado y mantenido por **LaBuhardillaDelLoco**.
+
+---
+
+## ¿Qué es Evil Portal?
+
+Evil Portal es una funcionalidad incluida en proyectos como **ESP32 Marauder** que permite mostrar una página web personalizada a los dispositivos que interactúan con un punto de acceso.
+
+Este tipo de herramientas resulta especialmente útil para comprender cómo funcionan los portales cautivos y para realizar demostraciones relacionadas con ingeniería social, seguridad WiFi y concienciación sobre ataques de phishing.
+
+Este repositorio contiene únicamente las **plantillas HTML** utilizadas para este tipo de demostraciones.
+
+---
+
+## Contenido del repositorio
+
+Las plantillas se encuentran dentro de la carpeta:
+
+```text
+templates/
+```
+
+Ejemplo de estructura:
+
+```text
+ESP32-Marauder-Evil-Portal-Templates/
+
+├── templates/
+│   ├── template-01.html
+│   ├── template-02.html
+│   └── template-03.html
+│
+├── previews/
+│   ├── template-01.png
+│   ├── template-02.png
+│   └── template-03.png
+│
+├── README.md
+└── LICENSE
+```
+
+La estructura podrá ampliarse a medida que se incorporen nuevas plantillas.
+
+---
+
+## Plantillas disponibles
+
+| Plantilla   | Descripción            | Preview      |
+| ----------- | ---------------------- | ------------ |
+| Template 01 | Portal de demostración | Próximamente |
+| Template 02 | Portal de demostración | Próximamente |
+| Template 03 | Portal de demostración | Próximamente |
+
+Esta tabla se irá actualizando conforme se añadan nuevas plantillas.
+
+---
+
+## Cómo utilizar las plantillas
+
+### 1. Descargar el repositorio
+
+Puedes clonar el repositorio utilizando Git:
+
+```bash
+git clone https://github.com/TU-USUARIO/ESP32-Marauder-Evil-Portal-Templates.git
+```
+
+O descargarlo directamente desde GitHub mediante:
+
+```text
+Code → Download ZIP
+```
+
+---
+
+### 2. Seleccionar una plantilla
+
+Accede a:
+
+```text
+/templates
+```
+
+y selecciona el archivo HTML que quieras utilizar.
+
+---
+
+### 3. Personalizar la plantilla
+
+Las plantillas pueden modificarse con cualquier editor de texto o editor de código.
+
+Por ejemplo:
+
+* Visual Studio Code
+* Notepad++
+* Sublime Text
+* Vim
+* Cualquier editor HTML
+
+Puedes modificar textos, estilos, colores y otros elementos visuales según las necesidades de tu laboratorio o demostración.
+
+---
+
+### 4. Cargar la plantilla en ESP32 Marauder
+
+Carga el archivo HTML mediante la funcionalidad **Evil Portal** de tu dispositivo compatible con ESP32 Marauder.
+
+El procedimiento exacto puede variar dependiendo del hardware, firmware y versión de Marauder utilizados.
+
+---
+
+## Compatibilidad
+
+Las plantillas están diseñadas principalmente para utilizarse con:
+
+* ESP32
+* ESP32 Marauder
+* Dispositivos compatibles con Evil Portal
+
+La compatibilidad puede variar dependiendo de:
+
+* versión del firmware
+* memoria disponible
+* dispositivo utilizado
+* implementación concreta de Evil Portal
+
+Por este motivo se recomienda mantener las plantillas lo más ligeras posible.
+
+---
+
+## Diseño de las plantillas
+
+Siempre que sea posible, las plantillas intentarán cumplir los siguientes criterios:
+
+* HTML ligero
+* CSS integrado
+* pocas dependencias externas
+* diseño responsive
+* buena visualización en dispositivos móviles
+* compatibilidad con las limitaciones del ESP32
+* facilidad para modificar el código
+
+Cuando sea posible, se priorizarán plantillas contenidas en un único archivo HTML.
+
+Esto facilita enormemente su carga y utilización en ESP32 Marauder.
+
+---
+
+## Crear tus propias plantillas
+
+Puedes utilizar cualquiera de las plantillas de este repositorio como punto de partida para crear tus propios diseños.
+
+Una plantilla básica podría tener una estructura similar a esta:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Evil Portal</title>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Portal de demostración</h1>
+
+<p>ESP32 Marauder Evil Portal</p>
+
+</body>
+
+</html>
+```
+
+A partir de ahí puedes adaptar completamente su apariencia.
+
+---
+
+## Recomendaciones
+
+Para mejorar la compatibilidad con dispositivos ESP32:
+
+* evita archivos excesivamente grandes
+* evita JavaScript innecesario
+* reduce el uso de imágenes pesadas
+* utiliza CSS sencillo
+* intenta mantener todo dentro de un único HTML
+* comprueba siempre la plantilla antes de utilizarla en una demostración
+
+También es recomendable probar las páginas desde diferentes dispositivos móviles.
+
+---
+
+## Uso responsable
+
+Este proyecto está creado exclusivamente con fines de:
+
+* aprendizaje
+* investigación
+* formación
+* concienciación en ciberseguridad
+* demostraciones
+* pruebas de seguridad autorizadas
+
+Las técnicas relacionadas con Evil Portal pueden utilizarse para realizar ataques de ingeniería social o capturar información de terceros.
+
+**No utilices estas plantillas contra personas, dispositivos o redes sin autorización expresa.**
+
+El usuario de este proyecto es responsable de asegurarse de que sus pruebas cumplen la legislación aplicable y se realizan únicamente dentro de sistemas propios o entornos para los que dispone de autorización.
+
+Los autores y colaboradores de este repositorio no se responsabilizan del uso indebido que pueda realizarse del contenido publicado.
+
+---
+
+## Laboratorio recomendado
+
+Si quieres experimentar con estas plantillas, lo recomendable es crear un pequeño laboratorio controlado compuesto por:
+
+```text
+ESP32 Marauder
+        │
+        │ WiFi
+        ▼
+Punto de acceso de pruebas
+        │
+        ▼
+Teléfono / PC de laboratorio
+```
+
+De esta forma puedes estudiar el comportamiento de los portales sin afectar a terceros.
+
+---
+
+## Contribuciones
+
+Las contribuciones son bienvenidas.
+
+Puedes colaborar:
+
+* creando nuevas plantillas
+* mejorando diseños existentes
+* corrigiendo errores
+* mejorando la compatibilidad
+* optimizando el tamaño de los archivos
+* añadiendo documentación
+
+Puedes hacerlo mediante un **Pull Request** en GitHub.
+
+Antes de enviar una plantilla comprueba que:
+
+1. Funciona correctamente.
+2. Es razonablemente ligera.
+3. No contiene archivos innecesarios.
+4. No contiene código malicioso.
+5. Está orientada a usos educativos o pruebas autorizadas.
+
+---
+
+## Autor
+
+Proyecto creado por:
+
+**LaBuhardillaDelLoco**
+
+Contenido centrado en:
+
+* ESP32
+* Arduino
+* IoT
+* electrónica
+* programación
+* hardware
+* domótica
+* ciberseguridad
+
+YouTube:
+
+**LaBuhardillaDelLoco**
+
+---
+
+## Licencia
+
+Este proyecto puede distribuirse bajo una licencia de código abierto.
+
+Una opción sencilla para este tipo de repositorio es utilizar la:
+
+**MIT License**
+
+Consulta el archivo:
+
+```text
+LICENSE
+```
+
+para obtener más información.
+
+---
+
+## Disclaimer
+
+Este repositorio tiene fines exclusivamente educativos.
+
+El contenido publicado pretende ayudar a comprender el funcionamiento de portales cautivos, técnicas de ingeniería social y mecanismos de seguridad relacionados con redes WiFi.
+
+Utiliza estas herramientas únicamente en:
+
+* tus propios dispositivos
+* tus propias redes
+* laboratorios
+* entornos CTF
+* sistemas donde tengas autorización explícita
+
+**No utilices este proyecto para obtener credenciales o información de terceros sin su consentimiento.**
+
+---
+
+## ESP32 Marauder Evil Portal Templates
+
+Si este repositorio te resulta útil, puedes:
+
+* darle una ⭐ en GitHub
+* compartirlo
+* proponer nuevas plantillas
+* contribuir con mejoras
+
+El repositorio irá creciendo progresivamente con nuevas plantillas y diseños.
